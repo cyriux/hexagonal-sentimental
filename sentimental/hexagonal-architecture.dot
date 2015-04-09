@@ -1,0 +1,77 @@
+# Class diagram Hexagonal Architecture
+digraph G {
+	graph [labelloc=top,label="Hexagonal Architecture",fontname="Verdana",fontsize=12,rankdir=LR];
+	edge [fontname="Verdana",fontsize=9,labelfontname="Verdana",labelfontsize=9];
+	node [fontname="Verdana",fontsize=9,shape=record];
+subgraph cluster_c0 {
+label = "Core Domain";
+//InMemoryLexicon
+	c1 [label="InMemoryLexicon"]
+//Lexicon
+	c2 [label="Lexicon"]
+//Sentiment
+	c3 [label="Sentiment"]
+//SentimentAnalysis
+	c4 [label="SentimentAnalysis"]
+//SentimentNotification
+	c5 [label="SentimentNotification"]
+//Trend
+	c6 [label="Trend"]
+}
+//Main
+	c10 [label="Main"]
+//SentimentalApplication
+	c11 [label="SentimentalApplication"]
+//SentimentalConfiguration
+	c12 [label="SentimentalConfiguration"]
+//TemplateHealthCheck
+	c13 [label="TemplateHealthCheck"]
+//TwitterStream
+	c14 [label="TwitterStream"]
+//CommandLineAdapter
+	c15 [label="CommandLineAdapter"]
+//FileBasedLexicon
+	c16 [label="FileBasedLexicon"]
+//SentimentReport
+	c17 [label="SentimentReport"]
+//SentimentalResource
+	c18 [label="SentimentalResource"]
+//TrendRepository
+	c19 [label="TrendRepository"]
+//TwitterAdapter
+	c20 [label="TwitterAdapter"]
+//SamplePlayer
+	c21 [label="SamplePlayer"]
+//AuditDAO
+	c7 [label="AuditDAO"]
+//EndToEndIT
+	c8 [label="EndToEndIT"]
+//IdSequence
+	c9 [label="IdSequence"]
+	// null
+	c9 -> c9 [arrowhead=open];
+	// null
+	c3 -> c3 [arrowhead=open];
+	// null
+	c2 -> c1 [dir=back,arrowtail=empty,style=dashed];
+	// null
+	c4 -> c6 [arrowhead=open];
+	// null
+	c20 -> c21 [arrowhead=open];
+	// null
+	c2 -> c16 [dir=back,arrowtail=empty,style=dashed];
+	// null
+	c20 -> c14 [arrowhead=open];
+	// null
+	c20 -> c4 [arrowhead=open];
+	// null
+	c15 -> c4 [arrowhead=open];
+	// null
+	c6 -> c19 [dir=back,arrowtail=empty,style=dashed];
+	// null
+	c18 -> c4 [arrowhead=open];
+	// null
+	c19 -> c7 [arrowhead=open];
+	// null
+	c4 -> c2 [arrowhead=open];
+}
