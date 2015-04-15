@@ -11,6 +11,10 @@ Sample app of sentiment analysis as an example of hexagonal architecture
 
 in the command line:
 
+    mvn package
+
+then:
+
     cd git/hexagonal-sentimental/sentimental
     java -jar target/sentimental-0.0.1-SNAPSHOT.jar server sentimental.yml
 
@@ -19,3 +23,5 @@ in the command line:
 - There is an **End-to-end test** marked as @ignored until you install postgres; this test is very convenient
 - The **auto-generation of the living diagram** uses the dot-diagram library that I've created. This dependency is brutally provided as a 'system' dependency until it's available on a public repository. Dot-diagram requires **Graphviz** installed (www.graphviz.org)
 - The sound files are not mine and are only provided as examples; unfortunately I don't remember where they come from.
+
+*This project had been deleted and re-created after I realized some private keys had been accidentaly committed.*
