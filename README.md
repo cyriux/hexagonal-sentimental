@@ -24,4 +24,4 @@ then:
 - The **auto-generation of the living diagram** uses the dot-diagram library that I've created. This dependency is brutally provided as a 'system' dependency until it's available on a public repository. Dot-diagram requires **Graphviz** installed (www.graphviz.org)
 - The sound files are not mine and are only provided as examples; unfortunately I don't remember where they come from.
 
-*This project had been deleted and re-created after I realized some private keys had been accidentaly committed.*
+*This project had been deleted and re-created after I realized some private keys had been accidentally committed.*
